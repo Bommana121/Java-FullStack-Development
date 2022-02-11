@@ -6,10 +6,6 @@ import java.util.Scanner;
 public class FixBugs {
 
     public static void main(String[] args) {
-        /*System.out.println("Hello World!");*/
-        System.out.println("\n**************************************\n");
-        System.out.println("\tWelcome to TheDesk \n");
-        System.out.println("**************************************");
        
         ArrayList<Integer> expenses = new ArrayList<Integer>();
         expenses.add(1000);
@@ -42,7 +38,7 @@ public class FixBugs {
             if(options==j){
                 switch (options){
                     case 1:
-                        System.out.println("Your saved expenses are listed below: \n");
+                        System.out.println("Your expenses are listed below: \n");
                         System.out.println(arrlist+"\n");
                         optionsSelection(arrlist);
                         break;
@@ -80,7 +76,7 @@ public class FixBugs {
                         closeApp();
                         break;
                     default:
-                        System.out.println("You have made an invalid choice!\n");
+                        System.out.println("Invalid choice!\n");
                         break;
                 }
             }
@@ -129,3 +125,4 @@ public class FixBugs {
         System.out.println();
     }
 }
+
