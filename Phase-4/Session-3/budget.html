@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var map = new Map();
+        map.set(1, 2000)
+        map.set(2, 1500)
+        map.set(5, 4300)
+        map.set(4, 3000)
+
+        function add(key, expense) 
+        {
+            if (map.has(key)) 
+            {
+                value = map.get(key)
+                map.set(key, expense + value)
+                console.log("the expense at key " + key + " is updated")
+                document.write("<br>the expense at key " + key + " is updated<br>")
+            }
+            else
+                map.set(key, expense)
+            console.log("the new key" + key + " is added and it's expense is " + expense)
+            document.write("<br>the new key " + key + " is added and it's expense is " + expense+"<br>")
+        }
+        function remove(key) 
+        {
+            map.delete(key)
+            console.log("deleted key :" + map.delete(key))
+            document.write("<br>deleted key : "+key+"<br>")
+        }
+        function show() 
+        {
+            console.log(map)
+            document.write("<br>The expenses according to keys are : <br>")
+            map.forEach((sum, key) => { document.write(key + ") " + sum + "<br>") })
+
+        }
+        function calBudget() 
+        {
+            var value = 0;
+            var sum;
+
+            map.forEach(sum => { value = sum + value })
+
+            console.log(value);
+            document.write(" <br> The total Expense is : " + value+"<br>")
+        }
+
+        show()
+        remove(2)
+        add(5,1300)
+        add(3,2400)
+        show()
+        add(1,3800)
+        calBudget()
+        remove(3)
+        show()
+        calBudget()
+        
+    </script>
+</body>
+
+</html>
