@@ -45,7 +45,7 @@ public class RegistrationAndLogin {
 
 	        
 	        WebElement compname= driver.findElement(By.cssSelector("#sView1\\:r1\\:0\\:companyName\\:\\:content"));
-	        compname.sendKeys("Mphasis");
+	        compname.sendKeys("AAAA");
 	        
 	        WebElement address1= driver.findElement(By.cssSelector("#sView1\\:r1\\:0\\:address1\\:\\:content"));
 	        address1.sendKeys("Hooghly , Kolkata");
